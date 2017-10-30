@@ -86,7 +86,7 @@ if [ $stage -le 1 ]; then
     mkdir -p $tmpdir/dict
 
     local/gp_norm_dict_CH.pl \
-	-i $gp_lexicon \
+	$gp_lexicon \
 	| \
 	sort -u \
 	     > \
