@@ -15,7 +15,7 @@ my ($fld) = @ARGV;
 
 my $tmpdir = "data/local/tmp/gp/mandarin";
 my $o = "$tmpdir/$fld/prompts.tsv";
-my $l = "$tmpdir/$fld/lists/trl.txt";
+my $l = "$tmpdir/$fld/lists/rmn.txt";
 
 open my $L, '<', "$l" or croak "$l $!";
 
