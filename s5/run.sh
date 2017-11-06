@@ -28,13 +28,13 @@ if [ $stage -le 0 ]; then
 	    $tmpdir/lists/wav.txt
 
     find \
-	$gp_corpus/trl \
+	$gp_corpus/rmn \
 	-type f \
-	-name "*.trl" \
+	-name "*.rmn" \
 	| \
 	sort \
 	> \
-	$tmpdir/lists/trl.txt
+	$tmpdir/lists/rmn.txt
 
     for fld in dev eval train; do
 	mkdir -p $tmpdir/$fld/lists
@@ -47,12 +47,12 @@ if [ $stage -le 0 ]; then
 
 	grep \
 	    -f conf/${fld}_spk.list  \
-	    $tmpdir/lists/trl.txt  \
+	    $tmpdir/lists/rmn.txt  \
 	    > \
-	    $tmpdir/$fld/lists/trl.txt
+	    $tmpdir/$fld/lists/rmn.txt
 
 	local/get_prompts.pl $fld
-
+exit
 	# make training lists
 	local/make_lists.pl $fld
 
