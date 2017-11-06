@@ -52,7 +52,7 @@ if [ $stage -le 0 ]; then
 	    $tmpdir/$fld/lists/rmn.txt
 
 	local/get_prompts.pl $fld
-exit
+
 	# make training lists
 	local/make_lists.pl $fld
 
