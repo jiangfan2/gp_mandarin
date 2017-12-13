@@ -131,7 +131,7 @@ if [ $stage -le 4 ]; then
 	data/lang \
 	data/lang_test
 fi
-
+exit
 if [ $stage -le 5 ]; then
     # extract acoustic features
     mkdir -p exp
